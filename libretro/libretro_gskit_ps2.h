@@ -33,7 +33,7 @@
 
 #include <gsKit.h>
 
-#define RETRO_HW_RENDER_INTERFACE_GSKIT_PS2_VERSION 1
+#define RETRO_HW_RENDER_INTERFACE_GSKIT_PS2_VERSION 2
 
 struct retro_hw_ps2_insets
 {
