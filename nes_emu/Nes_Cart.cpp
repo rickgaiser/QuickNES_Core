@@ -35,10 +35,12 @@ Nes_Cart::~Nes_Cart()
 
 void Nes_Cart::clear()
 {
-	free( prg_ );
+	if ( prg_ )
+		free( prg_ );
 	prg_ = NULL;
 	
-	free( chr_ );
+	if ( chr_ )
+		free( chr_ );
 	chr_ = NULL;
 	
 	prg_size_ = 0;

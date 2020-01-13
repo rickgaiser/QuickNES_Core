@@ -46,7 +46,8 @@ Blip_Buffer::Blip_Buffer()
 
 Blip_Buffer::~Blip_Buffer()
 {
-	free( buffer_ );
+	if ( buffer_ )
+		free( buffer_ );
 }
 
 void Blip_Buffer::clear( int entire_buffer )

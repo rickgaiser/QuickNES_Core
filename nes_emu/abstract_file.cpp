@@ -43,7 +43,7 @@ Mem_Writer::Mem_Writer()
 
 Mem_Writer::~Mem_Writer()
 {
-	if ( mode == expanding )
+	if ( ( mode == expanding ) && data_ )
 		free( data_ );
 }
 
