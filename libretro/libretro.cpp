@@ -987,7 +987,11 @@ void retro_run(void)
       ps2->coreTexture->Filter = GS_FILTER_LINEAR;
       ps2->coreTexture->Clut = (u32*)retro_palette;
       ps2->updatedPalette = true;
-      ps2->padding = (retro_hw_ps2_insets){8.0f, 8.0f, 8.0f, 8.0f};
+      // Correct for increased buffer size (why is it larger?)
+      ps2->padding.left   = 8.0f;
+      ps2->padding.right  = 8.0f;
+      ps2->padding.top    = 1.0f;
+      ps2->padding.bottom = 1.0f;
    }
 
    ps2->coreTexture->Mem = (u32*)frame.pixels;
