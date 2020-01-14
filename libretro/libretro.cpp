@@ -999,7 +999,7 @@ void retro_run(void)
    video_cb(buf,
 		   videoBufferWidth,
 		   videoBufferHeight,
-		   videoBufferWidth * sizeof(uint16_t));
+		   videoBufferWidth * sizeof(uint32_t));
 #else
 
 	   static uint16_t video_buffer[Nes_Emu::image_width * Nes_Emu::image_height];
